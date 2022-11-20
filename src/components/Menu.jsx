@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { NavLink } from "react-router-dom"
 import { Registrar } from "./Registrar"
 import { Listar } from "./Listar"
-import { Estadistica } from "./Estadistica"
+import { Actualizar } from "./Actualizar"
 
 export const Menu = (props) => {
 
@@ -29,7 +29,7 @@ export const Menu = (props) => {
     setLis("1");
     setEst("0");
   }
-  function op_estadistica(){
+  function op_actualizar(){
     setReg("0");
     setLis("0");
     setEst("1");
@@ -56,9 +56,9 @@ export const Menu = (props) => {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav">
-            <NavLink to="" className="nav-link  h5  text-center"  onClick={ op_registrar } >Registrar</NavLink>
-            <NavLink to="" className="nav-link  h5  text-center"  onClick={ op_listar } >Listar</NavLink>
-            <NavLink to="" className="nav-link  h5  text-center"  onClick={ op_estadistica } >Estadistica</NavLink>
+            <NavLink to="" className="nav-link  h5  text-center"  onClick={ op_registrar } >Crear Orden</NavLink>
+            <NavLink to="" className="nav-link  h5  text-center"  onClick={ op_listar } >Lista Ordenes</NavLink>
+            <NavLink to="" className="nav-link  h5  text-center"  onClick={ op_actualizar } >Actualizacion Ordenes</NavLink>
             <a className="nav-link  h5  text-center"  style={{color:"blue"}}  href=" "  onClick={ cerrarSesion } >Cerrar Sesión</a>
           </div>
         </div>
@@ -68,7 +68,7 @@ export const Menu = (props) => {
 
   { reg === "1" && <Registrar/> }
   { lis === "1" && <Listar/>}
-  { est === "1" && <Estadistica/> }
+  { est === "1" && <Actualizar/> }
 
 </>
   

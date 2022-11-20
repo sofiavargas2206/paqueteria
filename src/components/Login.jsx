@@ -34,7 +34,7 @@ export const Login = () => {
   return (
     
 
-    <div className="container" style={{background:"lightgray", marginTop:20, padding:20}}>
+    <div className="container" >
         
   
     <Form className='login border border-dark p-5 ' id='login' controlId='login'>

@@ -18,6 +18,10 @@ export const Registrar = () => {
   const [estilo, setEstilo] = useState("");
   const [tecnica, setTecnica] = useState("");
   const [precio, setPrecio] = useState("");
+  const [reg, setReg] = useState("");
+  const [lis, setLis] = useState("");
+  const [est, setEst] = useState("");
+ 
 
 
   const botonGuardar = (e) => {
