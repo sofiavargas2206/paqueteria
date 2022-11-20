@@ -37,48 +37,40 @@ export const Listar = () => {
     <div className="bg-light" style={{marginTop:20, padding:20}}>
 
     <div className="h3">
-      Listado De Registro De Pinturas
+      Listado De ordenes
     </div>
 
     <div className="table-responsive">
       
-      { registroslogin.length > 0 ? 
-
+    
       <>
         <table className="table table-bordered table-hover" style={{marginTop:12}}>
             <thead className="text-center" style={{background:"lightgray"}}>
                 <tr>
                     <th>#</th>
-                    <th>Titulo</th>
-                    <th>Estilo</th>
-                    <th>Tecnica</th>
-                    <th>Precio</th>
-                    <th>X</th>
+                    <th>Fecha</th>
+                    <th>Dirección Entrega </th>
+                    <th>Ciudad Entrega</th>
+                    <th>Estado</th>
                 </tr>
             </thead>
             <tbody className="text-center align-baseline">
                 {
-                  registroslogin.map((x, index) => (
-                    <tr key={index}>
-                      <th>{ index+1 }</th>
-                      <td>{ x.titulo }</td>
-                      <td>{ x.estilo }</td>
-                      <td>{ x.tecnica }</td>
-                      <td>{ x.precio }</td>
-                      <td className="text-center">
-                        <button className="btn btn-outline-danger" onClick={()=>botonEliminar(index)}>
-                          <i class="bi bi-trash3-fill"></i>
-                        </button>
-                      </td>
+                    <tr >
+                      <th>1</th>
+                      <td>20/11/2022 01:00</td>
+                      <td>calle falsa 123</td>
+                      <td>Bogotá</td>
+                      <td>Guardado</td>
+                     
                     </tr>
-                  ))
+                  
                 }
             </tbody>
         </table>
       </> 
       
-      : <p className='h5' style={{color:"red"}}>"No Hay Registros Para Listar"</p>
-      }
+    
       
     </div>
  

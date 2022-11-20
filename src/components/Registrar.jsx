@@ -53,41 +53,84 @@ export const Registrar = () => {
     <div className="bg-light" style={{marginTop:20, padding:20}}>
 
     <div className="h3">
-      Formulario De Registro De Pinturas
+      Formulario De Creacion Ordenes
       <br/>
       <form id="miFormulario" onSubmit={ botonGuardar } >
         <div className="row" style={{marginTop:20}}>
-          <div className="col-6">
-            <input className="form-control form-control-lg text-center" type="text" placeholder="Digite El Título"  onChange={(e) => setTitulo(e.target.value)}  required  />
+         <div className="col-6">
+          <label>Fecha</label>
+          <input className="form-control form-control-lg text-center" type="date" min="1"  placeholder="Digite la fecha"  onChange={(e) => setPrecio(e.target.value)}  required  />
+         
           </div>
-
           <div className="col-6">
-            <select className="form-select form-select-lg text-center"  onChange={(e) => setEstilo(e.target.value)}  required  >
-              <option value="">Indique Estilo</option>
-              <option value="Retrato">Retrato</option>
-              <option value="Paisaje">Paisaje</option>
-              <option value="Desnudo">Desnudo</option>
-            </select>
+          <label>Hora</label>
+          <input className="form-control form-control-lg text-center" type="time" min="1"  placeholder="Digite la hora"  onChange={(e) => setPrecio(e.target.value)}  required  />
+         
           </div>
         </div>
         
         <div className="row" style={{marginTop:20}}>
-          <div className="col-6">
-            <select className="form-select form-select-lg text-center"  onChange={(e) => setTecnica(e.target.value)}  required  >
-              <option value="">Indique Técnica</option>
-              <option value="Óleo">Óleo</option>
-              <option value="Acrílico">Acrílico</option>
-              <option value="Pastel">Pastel</option>
-            </select>
+         <div className="col-4">
+          <label>Largo</label>
+          <input className="form-control form-control-lg text-center" type="number" min="1"  placeholder="Digite el largo"  onChange={(e) => setPrecio(e.target.value)}  required  />
+         
           </div>
-          <div className="col-6">
-            <input className="form-control form-control-lg text-center" type="number" min="1" max="100000000" placeholder="Digite El Precio"  onChange={(e) => setPrecio(e.target.value)}  required  />
+          <div className="col-4">
+          <label>Ancho</label>
+          <input className="form-control form-control-lg text-center" type="number" min="1"  placeholder="Digite el anchi"  onChange={(e) => setPrecio(e.target.value)}  required  />
+         
+          </div>
+          <div className="col-4">
+          <label>Alto</label>
+          <input className="form-control form-control-lg text-center" type="number" min="1"  placeholder="Digite el alto"  onChange={(e) => setPrecio(e.target.value)}  required  />
+         
           </div>
         </div>
+        <div className="row" style={{marginTop:20}}>
+         <div className="col-6">
+          <label>Dirección recogida</label>
+          <input className="form-control form-control-lg text-center" type="text" min="1"  placeholder="Digite la direccion de recogida"  onChange={(e) => setPrecio(e.target.value)}  required  />
+         
+          </div>
+          <div className="col-6">
+          <label>Ciudad recogida</label>
+          <input className="form-control form-control-lg text-center" type="text" min="1"  placeholder="Digite la ciudad de recogida"  onChange={(e) => setPrecio(e.target.value)}  required  />
+         
+          </div>
+          
+        </div>
+        
+        <div className="row" style={{marginTop:20}}>
+         <div className="col-6">
+          <label>Nombre destinatario </label>
+          <input className="form-control form-control-lg text-center" type="text" min="1"  placeholder="Digite el nombre del destinatario"  onChange={(e) => setPrecio(e.target.value)}  required  />
+         
+          </div>
+          <div className="col-6">
+          <label>Dcoumento destinatario </label>
+          <input className="form-control form-control-lg text-center" type="text" min="1"  placeholder="Digite el documento del destinatario"  onChange={(e) => setPrecio(e.target.value)}  required  />
+         
+          </div>
+          
+        </div>
+        <div className="row" style={{marginTop:20}}>
+         <div className="col-6">
+          <label>Dirección destinatario</label>
+          <input className="form-control form-control-lg text-center" type="text" min="1"  placeholder="Digite la direccion de destino"  onChange={(e) => setPrecio(e.target.value)}  required  />
+         
+          </div>
+          <div className="col-6">
+          <label>Ciudad destinatario</label>
+          <input className="form-control form-control-lg text-center" type="text" min="1"  placeholder="Digite la ciudad de destino"  onChange={(e) => setPrecio(e.target.value)}  required  />
+         
+          </div>
+          
+        </div>
+       
 
         <div className="row" style={{marginTop:20}}>
           <div className="col">
-            <button className="btn btn-primary btn-lg">Guardar Datos</button>
+            <button className="btn btn-primary btn-lg">Crear Orden</button>
           </div>
         </div>
       </form>

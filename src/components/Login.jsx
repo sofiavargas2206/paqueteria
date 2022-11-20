@@ -52,7 +52,7 @@ export const Login = () => {
   <Form.Control type="password"  id="txtpas" className="border-dark" placeholder="Password"  onChange={ (e)=>setPas(e.target.value) }/>
 </Form.Group>
 <Form.Group className=" form-group" controlId="formBasicPassword">
-<a href='Registro'>LinkedIn handle</a>
+<a href='Registro'></a>
 </Form.Group>
 
 <input type="submit"  className="btn btn-primary" value="Login" onClick={ iniciarSesion }/>
