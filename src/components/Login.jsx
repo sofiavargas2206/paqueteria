@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import { Menu } from './Menu'
+import { Registro } from './Registro'
 import Form from 'react-bootstrap/Form';
+import { BrowserRouter, Router,Routes, Route, Link } from 'react-router-dom';
+
 
 export const Login = () => {
 
@@ -52,7 +55,14 @@ export const Login = () => {
   <Form.Control type="password"  id="txtpas" className="border-dark" placeholder="Password"  onChange={ (e)=>setPas(e.target.value) }/>
 </Form.Group>
 <Form.Group className=" form-group" controlId="formBasicPassword">
-<a href='Registro'>LinkedIn handle</a>
+
+
+  <Link to="/registro" > Registrate Aqui !!</Link>
+  <Routes>
+  <Route path="/registro" element={<Registro/>}/>
+  </Routes>
+ 
+
 </Form.Group>
 
 <input type="submit"  className="btn btn-primary" value="Login" onClick={ iniciarSesion }/>
